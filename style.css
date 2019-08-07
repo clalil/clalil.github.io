@@ -3,8 +3,8 @@ html ❴
 ❵
 
 body ❴
-    background-color: #000;
-    color: #fff;
+    background-color: #000000;
+    color: #ffffff;
 ❵
 
 *,
@@ -13,5 +13,9 @@ body ❴
     box-sizing: inherit;
     margin: 0;
     padding: 0;
+❵
+
+h1 ❴
+    color: #0066ff;
 ❵
 
