@@ -1,0 +1,17 @@
+html ❴
+    box-sizing: border-box;
+❵
+
+body ❴
+    background-color: #000;
+    color: #fff;
+❵
+
+*,
+::before,
+::after ❴
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+❵
+
