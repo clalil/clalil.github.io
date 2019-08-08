@@ -1,13 +1,119 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Test portfolio | Clarissa Liljander</title>
 </head>
 <body>
-    <h1>Hello World!</h1>
+  <nav>
+    <ul> <!--Start NavMenu-->
+       <li class="dropdown"> 
+         <i class="fa fa-bars"></i>
+      <ul>
+      <li>
+      <a href="index.html">Home</a>
+      </li>
+      <li>
+      <a href="about.html">About</a>
+      </li>
+      <li>
+      <a href="projects.html">Portfolio</a>
+      </li>
+      <li>
+      <a href="#contactme">Contact</a>
+      </li>
+      </ul>
+      </li>
+    </ul> <!--End NavMenu-->
+  </nav>
+  <header>
+    <div class="header__big-screen">
+    </div>
+    <div class="big-img">
+    <img src="https://images.pexels.com/photos/92904/pexels-photo-92904.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="Image of computer from Pexels.com">
+    <h1>Hej!</h1>
+    </div>
+  </header>
+  
+  <main>
+    <div class="about"> <!--Start "About"-->
+        <div class="small_header">
+        <h1>Hej!</h1>
+        </div>
+      <div class="text-center">
+      <h2>About Me</h2>
+      <p>I'm a junior developer from Sweden who is proficient in lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <a href="about.html"><button>Read More</button></a>
+      </div> <!--End text-center-->
+    </div> <!--End section-"About"-->
+    
+        <div id="whatido"> <!--Start Section "What I do"-->
+      <div class="text-center">
+      <h2>What I do</h2>
+        <p>I love collaborations with awesome teams! Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Here are some of my favourite projects (so far):</p>
+              </div> <!--End text-center-->
+          
+        <div class="grid" role="grid"> <!--Grid Starts-->
+          
+          <!--start grid-children below-->
+          <div id="grid-1" class="grids"><img src="https://images.pexels.com/photos/1038670/pexels-photo-1038670.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Project #1: ImageByPexels" onclick="myFunction(this);"></div>
+        <div id="grid-2" class="grids"><img src="https://images.pexels.com/photos/7376/startup-photos.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Project #2: ImageByPexels" onclick="myFunction(this);"></div>
+        <div id="grid-3" class="grids"><img src="https://images.pexels.com/photos/1266012/pexels-photo-1266012.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Project #3: ImageByPexels" onclick="myFunction(this);"></div>
+        <div id="grid-4" class="grids"><img src="https://images.pexels.com/photos/7357/startup-photos.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Project #4: ImageByPexels" onclick="myFunction(this);"></div>
+        <div id="grid-5" class="grids"><img src="https://images.pexels.com/photos/1124066/pexels-photo-1124066.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Project #5: ImageByPexels" onclick="myFunction(this);"></div> 
+          <!--End grid children-->
+          
+        </div> <!--End grid-->
+        <div class="text-center">
+        <p>You can access all of my projects with the click of a button.</p>
+          <a href="projects.html"><button>View All Projects</button></a>
+      </div> <!--End text-center-->
+    </div> <!--End section "What I do"-->
+    
+    <div id="whatothersthink"> <!--Start section "What others think"-->
+      <div class="text-center">
+      <h2>What my employers think of me</h2>
+      <p>I'm awesome, but don't just take my word for it! Below are some quotes from other people who have worked together with me.</p>
+        <div class="quotes">
+          <div class="quote-1">
+            <blockquote>"Tincidunt ornare massa eget egestas purus viverra accumsan in nisl. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus mauris!! At tellus at urna condimentum mattis pellentesque id. Malesuada bibendum arcu vitae elementum curabitur vitae nunc sed velit. Nec feugiat nisl pretium fusce id velit ut tortor."<br><br><em>~ Unknown, Someone</em></blockquote>
+          </div> <!--End quote-1 -->
+          <div class="quote-2">
+            <blockquote>"Tincidunt ornare massa eget egestas purus viverra accumsan in nisl. Bibendum neque egestas congue quisque egestas diam in arcu. Commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. Ac turpis egestas integer eget. Suscipit adipiscing bibendum est ultricies integer quis. Sed risus pretium quam vulputate dignissim suspendisse."<br><br><em>~ Noob, The Internet</em></blockquote>
+          </div> <!--End quote-2 -->
+        </div> <!--End quotes-->
+      </div> <!--End text-center-->
+    </div> <!--End section "What others think"-->
+    
+    <div id="dreamcontact"> <!--Start section "Dreams and Contact Details"-->
+      <div class="dreams">
+      <div class="text-center">
+      <h2>My developer dreams</h2>
+      <p>Currently I am a student at Craft Academy however ac tincidunt vitae semper quis. Pellentesque eu tincidunt tortor aliquam nulla facilisi. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Congue quisque egestas diam in arcu cursus. Sed ullamcorper morbi tincidunt ornare massa eget egestas.</p>
+        </div> <!--End text-center-->
+        </div> <!--End dreams-->
+      
+        <div class="contact" id="contactme">
+      <div class="text-center">
+      <h2>Contact Me</h2>
+        </div> <!--End text-center-->
+          <div class="contacts">
+            <p><i class="fa fa-map-marker fa-fw"></i>Stockholm, Sweden</p>
+            <p><i class="fa fa-phone fa-fw"></i>Phone: +46-spooky-phone</p>
+            <p><i class="fa fa-envelope fa-fw"></i> Email: someone@spookyemail.com</p>
+          </div> <!--End contacts-->
+      </div> <!--End contact-->
+    </div> <!--End section "Dreams & Contact Details"-->
+    
+  </main>
+   
+  <footer>
+    <h3>Clarissa Liljander &copy; 2019</h3>
+  </footer> 
 </body>
 </html>

@@ -1,20 +1,368 @@
-html ❴
-    box-sizing: border-box;
-❵
+/* --Fundamentals-- */
 
-body ❴
-    background: #766c87;
-    color: #f2efea;
-❵
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Lato&display=swap');
 
-*,
-::before,
-::after ❴
+html {
+  font: 400 62.5%/1.3 'Lato', sans-serif; /* 62.5% of 16px is 10px. 1rem = 10px. */
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+ body {
+  margin: 0;
+}
+
+  *,
+  *:before
+  ,*:after {
     box-sizing: inherit;
     margin: 0;
     padding: 0;
-❵
+  }
 
-h1 ❴
-    color: #0066ff;
-❵
+/* --General styles-- */
+
+footer,
+header,
+main,
+menu,
+nav {
+  display: block;
+}
+
+.text-center {
+  text-align: center;
+  padding: 2rem 3rem;
+  color: #2b2a2a;
+}
+
+/* Headings & paragraphs */
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 1rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+p,
+footer {
+  font-size: 1.5rem;
+}
+
+/* General Links & Buttons */
+
+a:hover {
+  cursor: pointer;
+}
+
+a:link,
+a:active,
+a:visited {
+  color: #141413;
+}
+
+  a > button {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5rem;
+  border: 1px dotted #4a4847;
+  background: #e6e1de;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+a:hover > button {
+  cursor: pointer;
+  font-weight: 900;
+}
+
+a:visited > button {
+  color: #141413;
+}
+
+/* --Navbar-- */
+
+/* !Makes sure .big-img doesn't block navbar */
+nav {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+}
+
+/* Visible menu */
+.dropdown {
+  text-align: right;
+  padding: 2rem;
+  background: #fff;
+}
+
+.dropdown i {
+  font-size: 4rem;
+  color: #000;
+}
+
+/* Hidden Menu */
+li {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  text-transform: uppercase;
+  list-style-type: none;
+  transition-duration: 0.8s;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+  li:hover,
+  li:focus-within { /* No IE/Opera support */
+	background: #ebe9e7;
+	cursor: pointer;
+}
+
+ul li ul {
+  position: absolute;
+  min-width: 100%;
+	background: transparent;
+  transition: all 0 ease;
+	left: 0;
+  display: none;
+  padding-top: 2rem;
+}
+
+ul li:hover > ul,
+ul li:focus-within > ul, /* No IE/Opera support */
+ul li ul:hover {
+  display: block;
+}
+
+/* Links for hidden menu */
+
+.dropdown a {
+  color: #000;
+  font-size: 2.5em;
+  text-decoration: none;
+}
+
+/* --Header-- */
+
+header {
+  min-height: 35em;
+  position: relative;
+  }
+
+header h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-shadow: 2px 1px #333231;
+  font-size: 6em;
+}
+
+/* !Nesting element and it's selector around img to prevent img from expanding outside of screen */
+.big-img img {
+    width: 100%;
+    display: block;
+    z-index: -1;
+}
+
+/*! Hidden on small screen, visibile on large */
+.header__big-screen {
+    display: none;
+}
+
+/* --Section "About"-- */
+
+.about h2 {
+  padding-top: 1.5rem;
+}
+
+/*! Hidden on small screen, visible on big */
+.small_header {
+    visibility: hidden;
+}
+
+.small_header h1 {
+    text-align: center;
+    color: #2b2a2a;
+    font-size: 0em;
+}
+
+/* --Section "What I do"-- */
+
+#whatido {
+  background: #edebe9;
+}
+
+/* Grid gallery */
+
+/*!Keeping img inside grid from expanding outside of screen */
+.grids {
+    overflow: hidden;
+}
+
+.grids img {
+    transition: transform 0.5s ease;
+}
+
+.grids img:hover {
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+/* !Keeping images within grid */
+.grid > div > img {
+    width: 100%;
+    object-fit: cover;
+    border: 1px solid #e6e1de;
+    padding: 0.2rem;
+    border-radius: 5px;
+}
+
+.grid {
+    display: grid;
+    justify-content: center;
+    align-itemts: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 0.9rem;
+    margin: 0 4rem;
+}
+
+/* --Section "What others think"-- */
+
+blockquote {
+    border: 1px solid #e6e1de;
+    margin: 1rem 0;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+/* --Section "Dreams and contact details"-- */
+
+.dreams {
+  background: #edebe9;
+}
+
+.contact {
+  background: #fff;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 2rem 0;
+}
+
+/* --Footer-- */
+
+footer {
+  box-shadow: 0px -2px 1px #dedcdb;
+  background: #fff;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+/* --Media queries-- */
+
+@media only screen and (min-width: 980px) {
+
+/*--GENERAL--*/
+    main, 
+    footer {
+      margin-left: 40%;
+    }
+
+    .text-center {
+        padding: 2rem 15rem;
+    }
+
+    h2 {
+        font-size: 3.5rem;
+        padding-top: 2rem;
+      }
+      
+      p,
+      blockquote {
+        font-size: 2rem;
+      }
+
+      a button {
+          font-size: 2rem;
+      }
+  
+  /* --Header-- */  
+  
+  header {
+    height:100%;
+    width: 40%;
+    background-color:#fff;
+    position:fixed!important;
+    z-index: 2;
+    overflow: auto;
+  }
+
+    .header__big-screen {
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://images.pexels.com/photos/92904/pexels-photo-92904.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+    min-height: 100%;
+  }
+
+  .big-img {
+      display: none;
+  }
+  
+  nav {
+    position: absolute;
+    left: 40%;
+    width: 60%;
+  }
+  /*--ABOUT--*/
+
+   .about {
+       padding-top: 15rem;
+   }
+/*! Hidden on small screen, visible on big */
+   .small_header {
+    visibility: visible;
+}
+
+.small_header h1 {
+    text-align: center;
+    color: #2b2a2a;
+    font-size: 7em;
+    padding-bottom: 2rem;
+}
+ /*--DREAMS & CONTACT--*/
+#dreamcontact {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+#dreamcontact .text-center {
+    padding: 2rem 5rem;
+}
+
+.dreams {
+  width: 50%;
+}
+
+.contact {
+  width: 50%;
+  background: #e6dddc;
+}
+  
+}
